@@ -2,6 +2,7 @@ import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { homeAction } from "../../store/actions"
 import Navbar from "./components/Navbar"
+import Topics from "./components/Topics"
 
 const HomeComponent = () => {
   const dispatch = useDispatch()
@@ -14,9 +15,7 @@ const HomeComponent = () => {
   return (
     <div>
       <Navbar />
-      {/* <Button onClick={handleClick} variant="contained" >
-       {open ? "Hide" : "Show"}
-      </Button> */}
+      <Topics />
     </div>
   )
 }

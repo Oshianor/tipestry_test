@@ -1,10 +1,9 @@
-import { SET_OPEN } from "../types";
-
+import { SET_OPEN } from "../types"
 
 const initialState = {
   open: false,
-  time: new Date()
-};
+  time: new Date(),
+}
 
 const home = (state = initialState, action) => {
   switch (action.type) {
@@ -12,15 +11,15 @@ const home = (state = initialState, action) => {
       return {
         ...state,
         open: action.payload,
-      };
+      }
     case "CLOSED":
       return {
         ...state,
         open: action.payload,
-      };
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default home;
+export default home

@@ -1,3 +1,3 @@
-import homeAction from "./homeAction";
+import homeAction from "./homeAction"
 
-export { homeAction };
+export { homeAction }

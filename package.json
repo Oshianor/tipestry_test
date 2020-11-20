@@ -18,6 +18,10 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,scss}\"",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.0"
   }
 }

@@ -1,23 +1,22 @@
-import { Button } from '@material-ui/core';
-import React from 'react';
-import Paper from './components/paper';
-import { useDispatch, useSelector } from "react-redux";
+import React from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { homeAction } from "../../store/actions"
+import Navbar from "./components/Navbar"
 
 const HomeComponent = () => {
-  const dispatch = useDispatch();
-  const { open } = useSelector(({ home }) => home);
+  const dispatch = useDispatch()
+  const { open } = useSelector(({ home }) => home)
 
   const handleClick = () => {
-    dispatch(homeAction.toggleOpen(!open));
+    dispatch(homeAction.toggleOpen(!open))
   }
 
   return (
     <div>
-      <Paper />
-      <Button onClick={handleClick} variant="contained" >
+      <Navbar />
+      {/* <Button onClick={handleClick} variant="contained" >
        {open ? "Hide" : "Show"}
-      </Button>
+      </Button> */}
     </div>
   )
 }

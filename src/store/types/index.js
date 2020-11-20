@@ -1,2 +1,1 @@
-
-export const SET_OPEN = "OPEN";
+export const SET_OPEN = "OPEN"

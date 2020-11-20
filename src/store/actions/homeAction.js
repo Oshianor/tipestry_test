@@ -1,10 +1,10 @@
-import { SET_OPEN } from "../types";
+import { SET_OPEN } from "../types"
 
-const toggleOpen = (payload) => ({
+const toggleOpen = payload => ({
   type: SET_OPEN,
   payload: payload,
-});
+})
 
 export default {
-  toggleOpen
+  toggleOpen,
 }

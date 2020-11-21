@@ -1,12 +1,14 @@
 import React from 'react';
-import Home from "../src/container/Home"
-
-
-
+import Home from "../src/container/Home";
+import { useDispatch } from "react-redux";
+import { homeAction } from "../src/store/actions"
 
 export default function Index({posts}) {
- 
-  console.log(posts)
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    dispatch(homeAction.setTopicsData(posts))
+  }, []);
+
   return <Home />
 }
 

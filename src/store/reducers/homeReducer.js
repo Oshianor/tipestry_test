@@ -1,8 +1,10 @@
-import { SET_OPEN } from "../types"
+import { SET_OPEN, SET_TOPICS } from "../types"
 
 const initialState = {
   open: false,
-  time: new Date(),
+  topics: [],
+  page: 1,
+  total: 0
 }
 
 const home = (state = initialState, action) => {
@@ -12,10 +14,13 @@ const home = (state = initialState, action) => {
         ...state,
         open: action.payload,
       }
-    case "CLOSED":
+    case SET_TOPICS:
       return {
         ...state,
-        open: action.payload,
+        ...action.payload,
+        // topics: action.payload.topics,
+        // page: action.payload.page,
+        // total: action.payload.total,
       }
     default:
       return state

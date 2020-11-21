@@ -9,7 +9,7 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { createLogger } from "redux-logger";
 import appReducer from "../src/store/reducers";
-
+import "../src/scss/app.scss"
 
 const logger = createLogger();
 const store = createStore(appReducer, applyMiddleware(thunk, logger));

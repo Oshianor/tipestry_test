@@ -7,7 +7,7 @@ export async function getStaticProps() {
     query: {
       topic: `${base_url}/topic`,
       topicId: `${topic}/:topicId`,
-      comment: `${topic}/comment/:tpoicId`,
+      comment: `${topic}/comment/:topicId`,
     },
   }
   const response = await fetch(api_data.query.topic)
@@ -25,9 +25,14 @@ export async function getStaticProps() {
 const Topics = ({ posts }) => {
   return (
     <div className="topics">
-      {posts && posts.map(topics => {
-        return <TopicsCard key={topics.id}>{topics}</TopicsCard>
-      })}
+      {posts &&
+        posts.map(topics => {
+          return (
+            <TopicsCard key={topics._id}>
+              
+              </TopicsCard>
+          ) 
+        })}
     </div>
   )
 }

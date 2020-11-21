@@ -4,6 +4,8 @@ import { homeAction } from "../../store/actions"
 import Navbar from "./components/Navbar"
 import Topics from "./components/Topics"
 
+
+
 const HomeComponent = () => {
   const dispatch = useDispatch()
   const { open } = useSelector(({ home }) => home)

@@ -19,7 +19,7 @@ const navbarStyles = makeStyles({
   linkText: {
     textDecoration: `none`,
     color: `white`,
-    textTransform: `uppercase`
+    textTransform: `uppercase`,
   },
 })
 
